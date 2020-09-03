@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+	   
+	   <bean id = "point" class = "com.assignment_10.ShapeApplication.Point">
+	   		<property name = "x" value = "0"/>
+	   		<property name = "y" value = "0"/>
+	   </bean> 
+	   
+	   <bean id = "line" class = "com.assignment_10.ShapeApplication.Line">
+	   		<property name = "point1" ref = "point"/>
+	   		<property name = "point2" ref = "point"/>
+	   </bean> 
+	   
+	   <bean id = "triangle" class = "com.assignment_10.ShapeApplication.Triangle">
+	   		<property name = "point1" ref = "point"/>
+	   		<property name = "point2" ref = "point"/>
+	   		<property name = "point3" ref = "point"/>
+	   </bean> 
+           
+</beans>
